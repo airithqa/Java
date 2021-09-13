@@ -1,0 +1,57 @@
+package com.company;
+
+import java.util.Random;
+import java.util.Scanner;
+ /*
+    Створити двовимірний массив, заповнити його випадковими значеннями від 0 до 9.
+     Вивести на екран  окремим методом
+      Вивести на екран всі парні числа побічної діагонаолі
+     */
+
+public class Main {
+
+    public static void main(String[] args) {
+
+
+        Scanner in=new Scanner(System.in);
+        int row=in.nextInt();
+        int column=in.nextInt();
+        int [][]arr=new int[row][column];
+        Arr(arr);
+        Vivod(arr);
+        System.out.println("");3
+        Obrob(arr);
+
+    }
+    private static void Arr( int mass [][]){
+
+        Random rnd = new Random();
+       for (int i=0; i<mass.length; i++){
+           for (int j=0;j<mass.length;j++){
+               mass[i][j]=rnd.nextInt(10)+1;
+           }
+       }
+       System.out.println();
+    }
+    private static void Vivod( int massiv [][]){
+        for (int i=0; i<massiv.length; i++){
+            for (int j=0;j<massiv.length;j++){
+                System.out.print(massiv[i][j]+" ");
+            }
+            System.out.println("");
+        }
+    }
+    private static void Obrob( int massiv [][]){
+        for (int i=0; i<massiv.length; i++){
+            for (int j=0;j<massiv.length;j++){
+                if(i==j){
+                    if(massiv[i][j]%2==0){
+                        System.out.println(massiv[i][j]);
+                    }
+                }
+            }
+        }
+    }
+    };
+
+   
