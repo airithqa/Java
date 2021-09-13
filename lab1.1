@@ -1,7 +1,8 @@
-package com.company;
 
-import java.util.Random;
-import java.util.Scanner;
+        package com.company;
+
+        import java.util.Random;
+        import java.util.Scanner;
  /*
     Створити двовимірний массив, заповнити його випадковими значеннями від 0 до 9.
      Вивести на екран  окремим методом
@@ -19,19 +20,19 @@ public class Main {
         int [][]arr=new int[row][column];
         Arr(arr);
         Vivod(arr);
-        System.out.println("");3
+        System.out.println("");
         Obrob(arr);
 
     }
     private static void Arr( int mass [][]){
 
         Random rnd = new Random();
-       for (int i=0; i<mass.length; i++){
-           for (int j=0;j<mass.length;j++){
-               mass[i][j]=rnd.nextInt(10)+1;
-           }
-       }
-       System.out.println();
+        for (int i=0; i<mass.length; i++){
+            for (int j=0;j<mass.length;j++){
+                mass[i][j]=rnd.nextInt(10)+1;
+            }
+        }
+        System.out.println();
     }
     private static void Vivod( int massiv [][]){
         for (int i=0; i<massiv.length; i++){
@@ -52,6 +53,6 @@ public class Main {
             }
         }
     }
-    };
+};
 
    
