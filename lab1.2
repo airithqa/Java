@@ -1,0 +1,22 @@
+public static void main(String[] args) {
+       FillArray(0,10,3);
+    }
+    
+    public static int [] FillArray(int begin, int end, int step){
+        int []arr=new int[1000];
+        Random rnd = new Random();
+        for (begin=0;begin<end;begin+=step){
+            arr[begin]=rnd.nextInt(10)+1;
+            System.out.println(arr[begin]);
+        }
+        return arr;
+
+    }
+
+    };
+
+    /*
+    Створити двовимірний массив, заповнити його випадковими значеннями від 0 до 9.
+     Вивести на екран  окремим методом
+      Вивести на екран всі парні числа побічної діагонаолі
+     */
